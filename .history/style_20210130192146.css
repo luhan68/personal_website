@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 10px;
+
+}
+
+.nav-bar ul li a.active-page {
+	font-weight: bold;
+	background-color: wheat;
+  }
+
+.nav {
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    width: 120px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+    float: right;
+}
+
+.nav-bar ul li {
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: tomato;
+    font-size: 14px;
+    border-radius: 5px;
+
+    transition: all 0.5s ease-out;
+}
+
+.nav-bar ul li:hover {
+    background-color: wheat;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.title {
+text-align: left;
+margin: 30px 0;
+}
+
+.myVideo {
+text-align: center;
+}
+
+.myVideo iframe {
+margin: 20px 20px;
+}
+
+.fb-like {
+margin-bottom: 30px;
+}
+
+.footer {
+width: 100%;
+background-color: #333;
+text-align: center;
+padding: 20px 0;
+margin-top: 50px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  input[type=submit] {
+    background-color: #a73012;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #d10c0c;
+  }
+
+
+  .myGallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+  
+  .myGallery img {
+    width: 100%;
+  }
+
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+table td, table th {
+    border: 1px solid rgb(34, 33, 33);
+    padding: 8px;
+  }
+  
+table tr:nth-child(even){background-color: #110f0f;}
+  
+table tr:hover {background-color: rgb(46, 43, 43);}
+  
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #350901;
+    color: white;
+  }
+
+
+  p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+
+/* I refer to Paul's cool animation design on codepen and fix a few display width bugs: https://codepen.io/paulvddool/pen/yYeeVE */
+
+#animation {
+	display: block;
+	margin: 20% auto;
+	height: 80px;
+	width: auto;
+}
+@media screen and (max-width: 1080px) {
+	#animation {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 0px;
+		width: 100%;
+	}
+}
+@keyframes animateOnce {
+	0% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform: translateY(80px); }
+	100% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform: translateY(0px); }
+}
+@-webkit-keyframes animateOnce {
+	0% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform: translateY(80px); }
+	100% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform: translateY(0px); }
+}
+#text {
+	width: 350px;
+	height: 80px;
+	float: left;
+	overflow: hidden;
+}
+#text h1 {
+	animation: animateOnce 0.2s;
+	-webkit-animation: animateOnce 0.2s;
+}
+@keyframes animateFirst {
+	0% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform:translateY(80px); }
+	1% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform:translateY(0px); }
+	14% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform:translateY(0px); }
+	15% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform:translateY(-80px); }
+	70% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform:translateY(-80px); }
+	71% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform:translateY(-160px); }
+	99% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform:translateY(-160px); }
+	100% { transform: translateY(-240px); -webkit-transform: translateY(-240px); -moz-transform:translateY(-240px); }
+}
+@-webkit-keyframes animateFirst {
+	0% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform:translateY(80px); }
+	1% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform:translateY(0px); }
+	14% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform:translateY(0px); }
+	15% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform:translateY(-80px); }
+	70% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform:translateY(-80px); }
+	71% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform:translateY(-160px); }
+	99% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform:translateY(-160px); }
+	100% { transform: translateY(-240px); -webkit-transform: translateY(-240px); -moz-transform:translateY(-240px); }
+}
+@keyframes animateSecond {
+	0% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform: translateY(80px); }
+	14% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform: translateY(80px); }
+	15% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform: translateY(0px); }
+	29% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform: translateY(0px); }
+	30% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform: translateY(-80px); }
+	44% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform: translateY(-80px); }
+	45% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform: translateY(-160px); }
+	59% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform: translateY(-160px); }
+	60% { transform: translateY(-240px); -webkit-transform: translateY(-240px); -moz-transform: translateY(-240px); }
+	70% { transform: translateY(-240px); -webkit-transform: translateY(-240px); -moz-transform: translateY(-240px); }
+	71% { transform: translateY(-320px); -webkit-transform: translateY(-320px); -moz-transform: translateY(-320px); }
+	85% { transform: translateY(-320px); -webkit-transform: translateY(-320px); -moz-transform: translateY(-320px); }
+	86% { transform: translateY(-400px); -webkit-transform: translateY(-400px); -moz-transform: translateY(-400px); }
+	99% { transform: translateY(-400px); -webkit-transform: translateY(-400px); -moz-transform: translateY(-400px); }
+	100% { transform: translateY(-480px); -webkit-transform: translateY(-480px); -moz-transform: translateY(-480px); }
+}
+@-webkit-keyframes animateSecond {
+	0% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform: translateY(80px); }
+	14% { transform: translateY(80px); -webkit-transform: translateY(80px); -moz-transform: translateY(80px); }
+	15% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform: translateY(0px); }
+	29% { transform: translateY(0px); -webkit-transform: translateY(0px); -moz-transform: translateY(0px); }
+	30% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform: translateY(-80px); }
+	44% { transform: translateY(-80px); -webkit-transform: translateY(-80px); -moz-transform: translateY(-80px); }
+	45% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform: translateY(-160px); }
+	59% { transform: translateY(-160px); -webkit-transform: translateY(-160px); -moz-transform: translateY(-160px); }
+	60% { transform: translateY(-240px); -webkit-transform: translateY(-240px); -moz-transform: translateY(-240px); }
+	70% { transform: translateY(-240px); -webkit-transform: translateY(-240px); -moz-transform: translateY(-240px); }
+	71% { transform: translateY(-320px); -webkit-transform: translateY(-320px); -moz-transform: translateY(-320px); }
+	85% { transform: translateY(-320px); -webkit-transform: translateY(-320px); -moz-transform: translateY(-320px); }
+	86% { transform: translateY(-400px); -webkit-transform: translateY(-400px); -moz-transform: translateY(-400px); }
+	99% { transform: translateY(-400px); -webkit-transform: translateY(-400px); -moz-transform: translateY(-400px); }
+	100% { transform: translateY(-480px); -webkit-transform: translateY(-480px); -moz-transform: translateY(-480px); }
+}
+#first {
+	height: 80px;
+	float: left;
+	margin-left: 10px;
+	overflow: hidden;
+}
+#first ul {
+	width: 230px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	animation: animateFirst 21s infinite;
+	-webkit-animation: animateFirst 21s infinite;
+}
+
+#second {
+	height: 80px;
+	float: left;
+	margin-left: 10px;
+	overflow: hidden;
+}
+#second ul {
+	width: 300px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	animation: animateSecond 21s infinite;
+	-webkit-animation: animateSecond 21s infinite;
+}
+
+h1 {
+	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 80px;
+	margin: 0px;
+}
+.gray {
+	color: #404040;
+}
+.silver {
+	color: #909090;
+}
+.lightgray {
+	color: #BBB;
+}
+.lightergray {
+	color: #DDD;
+}
+
+
