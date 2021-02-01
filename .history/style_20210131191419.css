@@ -34,8 +34,8 @@ body  {
 	visibility: hidden;
 	z-index: 10000;
   }
-  .scrollToTopBtn::after {
-	content: "T";
+  /* .scrollToTopBtn::after {
+	content: "B";
 	font-weight: normal;
 	font-style: normal;
 	font-size: 2em;
@@ -48,7 +48,7 @@ body  {
   }
   .scrollToTopBtn:active {
 	background-color: #555;
-  }
+  } */
   .scrollToTopBtn.show {
 	opacity: 1;
 	visibility: visible;
@@ -307,7 +307,6 @@ h1 {
 	color: #DDD;
 }
 
-/* with reference to https://codepen.io/danishyma/pen/qBNRQmm */
 
 .gallery-wrapper {
     display: grid;

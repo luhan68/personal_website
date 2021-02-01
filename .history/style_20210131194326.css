@@ -13,7 +13,6 @@ body  {
     width: 80vw;
     margin: 0 auto;
 	margin-top: 10px;
-	height: 200vmin
 }
 
 /* scrollToTop button refer to https://codepen.io/matthewcain/pen/ZepbeR */
@@ -34,8 +33,8 @@ body  {
 	visibility: hidden;
 	z-index: 10000;
   }
-  .scrollToTopBtn::after {
-	content: "T";
+  /* .scrollToTopBtn::after {
+	content: "B";
 	font-weight: normal;
 	font-style: normal;
 	font-size: 2em;
@@ -48,7 +47,7 @@ body  {
   }
   .scrollToTopBtn:active {
 	background-color: #555;
-  }
+  } */
   .scrollToTopBtn.show {
 	opacity: 1;
 	visibility: visible;
