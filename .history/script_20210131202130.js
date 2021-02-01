@@ -46,23 +46,17 @@ lightbox.addEventListener('click', e => {
 })
 }
 
-  /* Video lightbox refers to https://codepen.io/darcyvoutt/pen/MaamWg/ */
 // Function to reveal lightbox and adding YouTube autoplay
-function revealVideo(div,video_id) {
-  var video = document.getElementById(video_id).src;
-  document.getElementById(video_id).src = video+'&autoplay=1'; // adding autoplay to the URL
+function revealVideo(div) {
   document.getElementById(div).style.display = 'block';
 }
 
 // Hiding the lightbox and removing YouTube autoplay
-function hideVideo(div,video_id) {
-  var video = document.getElementById(video_id).src;
-  var cleaned = video.replace('&autoplay=1',''); // removing autoplay form url
-  document.getElementById(video_id).src = cleaned;
+function hideVideo(div) {
+  document.getElementById(div).getElementsByTagName('iframe').pause();
   document.getElementById(div).style.display = 'none';
 }
 
-/* scrollToTop button refer to https://codepen.io/matthewcain/pen/ZepbeR */
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
 

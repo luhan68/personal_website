@@ -35,7 +35,6 @@ body  {
 	z-index: 10000;
   }
   .scrollToTopBtn::after {
-	content: "T";
 	font-weight: normal;
 	font-style: normal;
 	font-size: 2em;

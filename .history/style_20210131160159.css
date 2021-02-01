@@ -16,7 +16,9 @@ body  {
 	height: 200vmin
 }
 
+
 /* scrollToTop button refer to https://codepen.io/matthewcain/pen/ZepbeR */
+
 
 .scrollToTopBtn {
 	display: inline-block;
@@ -30,12 +32,12 @@ body  {
 	right: 30px;
 	transition: background-color .3s, 
 	  opacity .5s, visibility .5s;
-	opacity: 0;
-	visibility: hidden;
+	opacity: 1;
+	visibility: visible;
 	z-index: 10000;
   }
-  .scrollToTopBtn::after {
-	content: "T";
+  /* .scrollToTopBtn::after {
+	content: "B";
 	font-weight: normal;
 	font-style: normal;
 	font-size: 2em;
@@ -48,7 +50,7 @@ body  {
   }
   .scrollToTopBtn:active {
 	background-color: #555;
-  }
+  } */
   .scrollToTopBtn.show {
 	opacity: 1;
 	visibility: visible;
@@ -57,6 +59,13 @@ body  {
 .nav {
     width: 100%;
 }
+
+/* .logo {
+    float: left;
+    width: 120px;
+  margin: 0;
+  padding: 0;
+} */
 
 .nav-bar {
     float: right;
@@ -307,7 +316,6 @@ h1 {
 	color: #DDD;
 }
 
-/* with reference to https://codepen.io/danishyma/pen/qBNRQmm */
 
 .gallery-wrapper {
     display: grid;

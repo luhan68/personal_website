@@ -2,6 +2,7 @@ function emailIsValid (email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
+
 function submitEmail() {
   var x, text;
 
@@ -17,7 +18,7 @@ function submitEmail() {
 }
 
 
-/* with reference to https://codepen.io/danishyma/pen/qBNRQmm */
+//  ***** LIGHTBOX AREA  ***** 
 
 if(document.getElementById("gallery")){
 const lightbox = document.createElement('div')
@@ -46,31 +47,28 @@ lightbox.addEventListener('click', e => {
 })
 }
 
-  /* Video lightbox refers to https://codepen.io/darcyvoutt/pen/MaamWg/ */
 // Function to reveal lightbox and adding YouTube autoplay
-function revealVideo(div,video_id) {
-  var video = document.getElementById(video_id).src;
-  document.getElementById(video_id).src = video+'&autoplay=1'; // adding autoplay to the URL
+function revealVideo(div) {
   document.getElementById(div).style.display = 'block';
 }
 
 // Hiding the lightbox and removing YouTube autoplay
-function hideVideo(div,video_id) {
-  var video = document.getElementById(video_id).src;
-  var cleaned = video.replace('&autoplay=1',''); // removing autoplay form url
-  document.getElementById(video_id).src = cleaned;
+function hideVideo(div) {
+  document.getElementById(div).getElementsByTagName('iframe').pause();
   document.getElementById(div).style.display = 'none';
 }
 
-/* scrollToTop button refer to https://codepen.io/matthewcain/pen/ZepbeR */
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
 
 function handleScroll() {
   // Do something on scroll
-  var scrollTotal = document.body.scrollHeight - document.body.clientHeight
-  if (document.body.scrollTop /scrollTotal > 0.25) {
+  var scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  console.log("scrollTop is " + document.documentElement.scrollTop)
+  console.log("scrollTotal is " + scrollTotal)
+  if (document.documentElement.scrollTop /scrollTotal > 0.75) {
     // Show button
+    console.log("button is shown")
     scrollToTopBtn.classList.add("show")
   } else {
     // Hide button
@@ -80,7 +78,7 @@ function handleScroll() {
 
 function scrollToTop() {
   // Scroll to top logic
-  document.body.scrollTo({
+  document.documentElement.scrollTo({
     top: 0,
     behavior: "smooth"
   })
